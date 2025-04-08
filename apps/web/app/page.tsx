@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <Container>
       <div>
-        <span>Hello {session.user?.name}</span>
+        <span>Hello {session.user?.email}</span>
         <SignOutButton />
       </div>
     </Container>

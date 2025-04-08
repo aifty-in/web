@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { GoogleSignIn } from '../_components/google-signin';
+import { signUp } from '@/lib/action';
+import { redirect } from 'next/navigation';
 
 const Page = async () => {
   return (
@@ -26,8 +28,12 @@ const Page = async () => {
       {/* Email/Password Sign Up */}
       <form
         className="space-y-4"
-        action={async () => {
+        action={async (formData) => {
           'use server';
+          const res = await signUp(formData);
+          if (res.success) {
+            redirect('/signin');
+          }
         }}
       >
         <Input
@@ -51,7 +57,7 @@ const Page = async () => {
 
       <div className="text-center">
         <Button asChild variant="link">
-          <Link href="/sign-in">Already have an account? Sign in</Link>
+          <Link href="/signin">Already have an account? Sign in</Link>
         </Button>
       </div>
     </div>

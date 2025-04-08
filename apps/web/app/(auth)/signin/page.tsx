@@ -4,7 +4,7 @@ import { executeAction } from '@/lib/executeAction';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { GithubSignIn } from '../_components/github-signin';
-import { auth } from '@/lib/auth';
+import { auth, signIn } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { GoogleSignIn } from '../_components/google-signin';
 
@@ -37,7 +37,7 @@ const page = async () => {
           'use server';
           await executeAction({
             actionFn: async () => {
-              // await signIn('credentials', formData);
+              await signIn('credentials', formData);
             },
           });
         }}
@@ -63,7 +63,7 @@ const page = async () => {
 
       <div className="text-center">
         <Button asChild variant="link">
-          <Link href="/sign-up">Don&apos;t have an account? Sign up</Link>
+          <Link href="/signup">Don&apos;t have an account? Sign up</Link>
         </Button>
       </div>
     </div>
