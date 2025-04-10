@@ -16,7 +16,7 @@ import { ProductCard } from '@/components/product-card';
 
 const Lobby = () => {
   return (
-    <Shell className="max-w-6xl gap-0 mx-auto">
+    <Shell className="max-w-6xl gap-0 mx-auto p-4">
       <PageHeader
         as="section"
         className="mx-auto items-center gap-2 text-center"
@@ -39,7 +39,7 @@ const Lobby = () => {
           </Badge>
         </Link>
         <PageHeaderHeading
-          className="animate-fade-up"
+          className="animate-fade-up mt-4"
           style={{ animationDelay: '0.20s', animationFillMode: 'both' }}
         >
           AI-Powered NFT Platform
@@ -72,8 +72,14 @@ const Lobby = () => {
         description="Here are some stunning NFTs"
         href="/products"
         linkText="View all NFTs"
-        className="pt-14 md:pt-20 lg:pt-24"
       >
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
         <ProductCard />
       </ContentSection>
     </Shell>

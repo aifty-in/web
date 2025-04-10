@@ -34,7 +34,7 @@ export const ProductCard = () => {
       <CardHeader className=" p-0">
         <AspectRatio ratio={4 / 3} className="relative">
           <Image
-            src={'/images/product-placeholder.webp'}
+            src={'/images/nft1.webp'}
             alt="product image"
             className="object-cover border-b absolute"
             fill
