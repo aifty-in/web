@@ -11,6 +11,8 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';
+import { ContentSection } from '@/components/content-section';
+import { ProductCard } from '@/components/product-card';
 
 const Lobby = () => {
   return (
@@ -65,6 +67,15 @@ const Lobby = () => {
           </Link>
         </PageActions>
       </PageHeader>
+      <ContentSection
+        title="Featured NFTs"
+        description="Here are some stunning NFTs"
+        href="/products"
+        linkText="View all NFTs"
+        className="pt-14 md:pt-20 lg:pt-24"
+      >
+        <ProductCard />
+      </ContentSection>
     </Shell>
   );
 };
