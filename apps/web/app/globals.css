@@ -141,6 +141,12 @@
   }
 }
 
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+}
+
 /* styles/animations.css */
 @keyframes fade-up {
   from {
