@@ -20,7 +20,7 @@ function PageHeader({
     <Comp
       className={cn(
         'flex max-w-[61.25rem] flex-col gap-1',
-        withPadding && 'py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-18',
+        withPadding && 'py-8 md:py-10 md:pb-8 lg:py-20 lg:pb-18',
         className
       )}
       {...props}
