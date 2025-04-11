@@ -75,7 +75,7 @@ export function ProductsCombobox() {
         className="relative p-0 xl:h-10 xl:w-60 xl:justify-start xl:px-1 xl:py-2"
         onClick={() => setOpen(true)}
       >
-        <MagnifyingGlassIcon className="size-4 xl:mr-2" aria-hidden="true" />
+        <MagnifyingGlassIcon className="size-4" aria-hidden="true" />
         <span className="hidden xl:inline-flex">Search products...</span>
         <span className="sr-only">Search products</span>
         <Kbd
