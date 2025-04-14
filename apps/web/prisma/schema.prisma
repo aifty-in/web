@@ -77,3 +77,13 @@ model Authenticator {
  
   @@id([userId, credentialID])
 }
+
+model Product{
+  id String @id @default(uuid())
+  name String
+  price String
+  originalPrice String
+  rating String
+  status Boolean
+  featuredProduct Boolean @default(false)
+}

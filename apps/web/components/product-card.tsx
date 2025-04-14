@@ -23,12 +23,12 @@ import {
 } from './ui/dialog';
 
 interface ProductCardProps {
-  imageUrl: String;
+  imageUrl?: String;
   title: String;
-  Price: String;
+  price: String;
 }
 
-export const ProductCard = () => {
+export const ProductCard = ({ price, title }: ProductCardProps) => {
   return (
     <Card className="size-full overflow-hidden rounded-lg py-0">
       <CardHeader className=" p-0">
@@ -79,8 +79,8 @@ export const ProductCard = () => {
         </AspectRatio>
         <CardContent className="p-4 flex items-center justify-between">
           <div className="space-y-1.5">
-            <CardTitle className="line-clamp-1">NFT 1</CardTitle>
-            <CardDescription className="line-clamp-1">$1.99</CardDescription>
+            <CardTitle className="line-clamp-1">{title}</CardTitle>
+            <CardDescription className="line-clamp-1">${price}</CardDescription>
           </div>
           <div className="flex items-center gap-2">
             <Button

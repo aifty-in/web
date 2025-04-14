@@ -13,8 +13,15 @@ import Link from 'next/link';
 import React from 'react';
 import { ContentSection } from '@/components/content-section';
 import { ProductCard } from '@/components/product-card';
+import db from '@/prisma/db';
 
-const Lobby = () => {
+const Lobby = async () => {
+  const products = await db.product.findMany({
+    where: {
+      featuredProduct: true,
+    },
+  });
+
   return (
     <Shell className="max-w-6xl gap-0 mx-auto p-4 ">
       <PageHeader
@@ -75,14 +82,13 @@ const Lobby = () => {
         className="animate-fade-up"
         style={{ animationDelay: '0.40s', animationFillMode: 'both' }}
       >
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.map((product) => (
+          <ProductCard
+            price={product.price}
+            title={product.name}
+            key={product.id}
+          />
+        ))}
       </ContentSection>
     </Shell>
   );
