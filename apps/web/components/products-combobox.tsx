@@ -72,7 +72,7 @@ export function ProductsCombobox() {
     <>
       <Button
         variant="outline"
-        className="relative p-0 xl:h-10 xl:w-60 xl:justify-start xl:px-1 xl:py-2"
+        className="relative hidden md:flex p-0 xl:h-10 xl:w-60 xl:justify-start xl:px-1 xl:py-2"
         onClick={() => setOpen(true)}
       >
         <MagnifyingGlassIcon className="size-4" aria-hidden="true" />

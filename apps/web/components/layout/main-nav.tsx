@@ -15,7 +15,7 @@ export const MainNav = () => {
   return (
     <div className="flex items-center gap-4">
       <p className="text-2xl font-semibold">AIFTY</p>
-      <NavigationMenu className="items-center ml-2">
+      <NavigationMenu className="items-center ml-2 hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/aibot" legacyBehavior passHref>

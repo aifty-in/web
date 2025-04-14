@@ -16,7 +16,7 @@ import { ProductCard } from '@/components/product-card';
 
 const Lobby = () => {
   return (
-    <Shell className="max-w-6xl gap-0 mx-auto p-4">
+    <Shell className="max-w-6xl gap-0 mx-auto p-4 ">
       <PageHeader
         as="section"
         className="mx-auto items-center gap-2 text-center"
@@ -39,13 +39,13 @@ const Lobby = () => {
           </Badge>
         </Link>
         <PageHeaderHeading
-          className="animate-fade-up mt-4"
+          className="animate-fade-up mt-2 md:mt-4"
           style={{ animationDelay: '0.20s', animationFillMode: 'both' }}
         >
           AI-Powered NFT Platform
         </PageHeaderHeading>
         <PageHeaderDescription
-          className="max-w-[46.875rem] animate-fade-up"
+          className="max-w-[46.875rem] animate-fade-up text-sm"
           style={{ animationDelay: '0.30s', animationFillMode: 'both' }}
         >
           Our AI-driven NFT SaaS platform empowers creators to effortlessly
@@ -72,6 +72,8 @@ const Lobby = () => {
         description="Here are some stunning NFTs"
         href="/products"
         linkText="View all NFTs"
+        className="animate-fade-up"
+        style={{ animationDelay: '0.40s', animationFillMode: 'both' }}
       >
         <ProductCard />
         <ProductCard />
